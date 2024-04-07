@@ -1,9 +1,10 @@
-# ft_printf_tester
+# FT_PRINTF_TESTER
 
 ## Summary
 
-My tester for 42 ```ft_printf``` project.</br>
-It **only works with the mandatory part** of the project.
+My tester for 42 [```ft_printf```](https://github.com/pquline/ft_printf) project.</br>
+- It **only works with the mandatory part** of the project
+- It **only checks for differences between the return values** of ```printf``` and ```ft_printf``` (the outputs are to be manually checked)
 
 ## Usage
 
@@ -32,3 +33,7 @@ cd ft_printf_tester/
 ./run.sh
 ```
 *Note: If the .h files are not located in the ```ìncludes/``` folder, change the ```$INCLUDES``` value according to their location.*
+
+## Example
+
+![ft_printf_tester](https://github.com/pquline/ft_printf_tester/assets/13948473/96e09a43-d1a9-4808-b712-e179fb1ed9c7)
