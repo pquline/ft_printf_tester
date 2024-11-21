@@ -20,7 +20,7 @@ $> ls -l ft_printf
 drwxr-xr-x	1	XX	XX	XX Jan  1 00:00	ft_printf_tester
 ```
 ### Installation
-- Clone the repository at the root of ```ft_printf``` project :
+- Clone the repository at the root of ```ft_printf``` project:
 ```bash
 git clone https://github.com/pquline/ft_printf_tester.git
 ```
