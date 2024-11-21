@@ -2,9 +2,9 @@
 
 ## Summary
 
-My tester for 42 [```ft_printf```](https://github.com/pquline/ft_printf) project.</br>
+A basic tester for 42 [```ft_printf```](https://github.com/pquline/ft_printf) project.</br>
 - It **only works with the mandatory part** of the project
-- It **only checks for differences between the return values** of ```printf``` and ```ft_printf``` (the outputs are to be manually checked)
+- It **only checks for differences between the return values** of ```printf``` and ```ft_printf```, so the outputs are to be manually checked
 
 ## Usage
 
@@ -20,15 +20,15 @@ $> ls -l ft_printf
 drwxr-xr-x	1	XX	XX	XX Jan  1 00:00	ft_printf_tester
 ```
 ### Installation
-- Clone the repository at the root of ```ft_printf```'s project :
+- Clone the repository at the root of ```ft_printf``` project :
 ```bash
 git clone https://github.com/pquline/ft_printf_tester.git
 ```
-- Change the working directory :
+- Change the working directory:
 ```bash
 cd ft_printf_tester/
 ```
-- Run the script :
+- Run the script:
 ```bash
 ./run.sh
 ```
