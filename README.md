@@ -3,8 +3,7 @@
 ## Summary
 
 A basic tester for 42 [```ft_printf```](https://github.com/pquline/ft_printf) project.</br>
-- It **only works with the mandatory part** of the project
-- It **only checks for differences between the return values** of ```printf``` and ```ft_printf```, so the outputs are to be manually checked
+It **only checks for differences between the return values** of ```printf``` and ```ft_printf```, so the outputs are to be manually checked
 
 ## Usage
 
@@ -17,7 +16,7 @@ $> ls -l ft_printf
 -rw-r--r--	1	XX	XX	XX Jan  1 00:00	Makefile
 -rw-r--r--	1	XX	XX	XX Jan  1 00:00	*.h, */*.h
 -rw-r--r--	1	XX	XX	XX Jan  1 00:00	*.c, */*.c
-drwxr-xr-x	1	XX	XX	XX Jan  1 00:00	ft_printf_tester
+drwxr-xr-x	1	XX	XX	XX Jan  1 00:00	ft_printf_tester/
 ```
 ### Installation
 - Clone the repository at the root of ```ft_printf``` project:
