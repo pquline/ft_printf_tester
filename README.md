@@ -35,4 +35,4 @@ cd ft_printf_tester/
 
 ## Example
 
-![ft_printf_tester](https://github.com/pquline/ft_printf_tester/assets/13948473/96e09a43-d1a9-4808-b712-e179fb1ed9c7)
+![ft_printf_tester](https://github.com/user-attachments/assets/6af4b456-9afa-439d-8924-6d4dea697473)
