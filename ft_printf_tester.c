@@ -436,6 +436,7 @@ void	integer_flags(void)
 	print_decimal(0);
 	print_decimal(42);
 	print_decimal(-42);
+	print_mix1(" %.1d ", 0, 0, 0, 0, 0);
 	print_mix1("%+5d", 42, 0, 0, 0, 0);
 	print_mix1("%-5d", 42, 0, 0, 0, 0);
 	print_mix1("%05d", 42, 0, 0, 0, 0);
