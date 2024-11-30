@@ -372,6 +372,17 @@ void	percent(void)
 	print_percent();
 }
 
+void	single_character_flags(void)
+{
+	print_columns();
+	print_category("\%c", "SINGLE CHARACTER FLAGS");
+	print_mix1("%5c", 'A', 0, 0, 0, 0);
+	print_mix1("%1c", 'B', 0, 0, 0, 0);
+	print_mix1("%-5c", 'C', 0, 0, 0, 0);
+	print_mix1("%-1c", 'D', 0, 0, 0, 0);
+	print_mix1("%05c", 'E', 0, 0, 0, 0);
+}
+
 void	mix(void)
 {
 	print_columns();
@@ -427,10 +438,10 @@ void	hex_flags(void)
 	print_mix1("%08x", 255, 0, 0, 0, 0);
 }
 
-void	string_width_and_precision(void)
+void	string_flags(void)
 {
 	print_columns();
-	print_category("%s", "STRING WIDTH & PRECISION");
+	print_category("%s", "STRING FLAGS");
 	print_string("hello");
 	print_string("world");
 	print_mix2("%-20s", "hello", "", "", "", "");
@@ -454,19 +465,9 @@ void	pointer_flags(void)
 	print_mix3("%.5p", &dummy, 0, 0, 0, 0);
 }
 
-void	single_character_flags(void)
-{
-	print_columns();
-	print_category("\%c", "SINGLE CHARACTER FLAGS");
-	print_mix1("%5c", 'A', 0, 0, 0, 0);
-	print_mix1("%1c", 'B', 0, 0, 0, 0);
-	print_mix1("%-5c", 'C', 0, 0, 0, 0);
-	print_mix1("%-1c", 'D', 0, 0, 0, 0);
-	print_mix1("%05c", 'E', 0, 0, 0, 0);
-}
-
 int	main(void)
 {
+	// MANDATORY
 	no_conversion();
 	single_character();
 	string();
@@ -478,11 +479,12 @@ int	main(void)
 	hex_upper();
 	percent();
 	mix();
+	// BONUS
 	single_character_flags();
 	integer_flags();
 	unsigned_flags();
 	hex_flags();
-	string_width_and_precision();
+	string_flags();
 	pointer_flags();
 	return (0);
 }
