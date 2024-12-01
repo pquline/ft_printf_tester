@@ -91,7 +91,8 @@ void	print_no_conversion(char *str)
 	size_t	ft_result;
 	size_t	og_result;
 
-	ft_printf(BLUE "           [%s]\n" NO_STYLE, str);
+	printf(BLUE "           [%s]\n" NO_STYLE, str);
+	fflush(NULL);
 	ft_printf("ft_printf: [");
 	ft_result = ft_printf(str);
 	printf("]\n");
@@ -107,7 +108,8 @@ void	print_single_character(unsigned char c)
 	size_t	ft_result;
 	size_t	og_result;
 
-	ft_printf(BLUE "           [%c]\n" NO_STYLE, c);
+	printf(BLUE "           [%c]\n" NO_STYLE, c);
+	fflush(NULL);
 	ft_printf("ft_printf: [");
 	ft_result = ft_printf("%c", c);
 	printf("]\n");
@@ -123,7 +125,8 @@ void	print_string(char *str)
 	size_t	ft_result;
 	size_t	og_result;
 
-	ft_printf(BLUE "           [%s]\n" NO_STYLE, str);
+	printf(BLUE "           [%s]\n" NO_STYLE, str);
+	fflush(NULL);
 	ft_printf("ft_printf: [");
 	ft_result = ft_printf("%s", str);
 	printf("]\n");
@@ -139,7 +142,8 @@ void	print_pointer(void *ptr)
 	size_t	ft_result;
 	size_t	og_result;
 
-	ft_printf(BLUE "           [%p]\n" NO_STYLE, ptr);
+	printf(BLUE "           [%p]\n" NO_STYLE, ptr);
+	fflush(NULL);
 	ft_printf("ft_printf: [");
 	ft_result = ft_printf("%p", ptr);
 	printf("]\n");
@@ -155,7 +159,8 @@ void	print_decimal(int nbr)
 	size_t	ft_result;
 	size_t	og_result;
 
-	ft_printf(BLUE "           [%d]\n" NO_STYLE, nbr);
+	printf(BLUE "           [%d]\n" NO_STYLE, nbr);
+	fflush(NULL);
 	ft_printf("ft_printf: [");
 	ft_result = ft_printf("%d", nbr);
 	printf("]\n");
@@ -171,7 +176,8 @@ void	print_integer(int nbr)
 	size_t	ft_result;
 	size_t	og_result;
 
-	ft_printf(BLUE "           [%d]\n" NO_STYLE, nbr);
+	printf(BLUE "           [%d]\n" NO_STYLE, nbr);
+	fflush(NULL);
 	ft_printf("ft_printf: [");
 	ft_result = ft_printf("%i", nbr);
 	printf("]\n");
@@ -187,7 +193,8 @@ void	print_unsigned_decimal(unsigned int nbr)
 	size_t	ft_result;
 	size_t	og_result;
 
-	ft_printf(BLUE "           [%u]\n" NO_STYLE, nbr);
+	printf(BLUE "           [%u]\n" NO_STYLE, nbr);
+	fflush(NULL);
 	ft_printf("ft_printf: [");
 	ft_result = ft_printf("%u", nbr);
 	printf("]\n");
@@ -203,7 +210,8 @@ void	print_hex_lower(int nbr)
 	size_t	ft_result;
 	size_t	og_result;
 
-	ft_printf(BLUE "           [%d]\n" NO_STYLE, nbr);
+	printf(BLUE "           [%d]\n" NO_STYLE, nbr);
+	fflush(NULL);
 	ft_printf("ft_printf: [");
 	ft_result = ft_printf("%x", nbr);
 	printf("]\n");
@@ -219,7 +227,8 @@ void	print_hex_upper(int nbr)
 	size_t	ft_result;
 	size_t	og_result;
 
-	ft_printf(BLUE "           [%d]\n" NO_STYLE, nbr);
+	printf(BLUE "           [%d]\n" NO_STYLE, nbr);
+	fflush(NULL);
 	ft_printf("ft_printf: [");
 	ft_result = ft_printf("%X", nbr);
 	printf("]\n");
@@ -235,7 +244,8 @@ void	print_percent()
 	size_t	ft_result;
 	size_t	og_result;
 
-	ft_printf(BLUE "           [%s]\n" NO_STYLE, "%%");
+	printf(BLUE "           [%s]\n" NO_STYLE, "%%");
+	fflush(NULL);
 	ft_printf("ft_printf: [");
 	ft_result = ft_printf("%%");
 	printf("]\n");
@@ -250,7 +260,8 @@ void	print_mix1(char *format, int n1, unsigned int n2, int n3, int n4, int n5)
 	size_t	ft_result;
 	size_t	og_result;
 
-	ft_printf(BLUE "           [%s]\n" NO_STYLE, format);
+	printf(BLUE "           [%s]\n" NO_STYLE, format);
+	fflush(NULL);
 	ft_printf("ft_printf: [");
 	ft_result = ft_printf(format, n1, n2, n3, n4, n5);
 	printf("]\n");
@@ -266,7 +277,8 @@ void	print_mix2(char *format, char *s1, char *s2, char *s3, char *s4, char *s5)
 	size_t	ft_result;
 	size_t	og_result;
 
-	ft_printf(BLUE "           [%s]\n" NO_STYLE, format);
+	printf(BLUE "           [%s]\n" NO_STYLE, format);
+	fflush(NULL);
 	ft_printf("ft_printf: [");
 	ft_result = ft_printf(format, s1, s2, s3, s4, s5);
 	printf("]\n");
@@ -282,7 +294,8 @@ void	print_mix3(char *format, int *p1, unsigned int n2, int n3, int n4, int n5)
 	size_t	ft_result;
 	size_t	og_result;
 
-	ft_printf(BLUE "           [%s]\n" NO_STYLE, format);
+	printf(BLUE "           [%s]\n" NO_STYLE, format);
+	fflush(NULL);
 	ft_printf("ft_printf: [");
 	ft_result = ft_printf(format, p1, n2, n3, n4, n5);
 	printf("]\n");
