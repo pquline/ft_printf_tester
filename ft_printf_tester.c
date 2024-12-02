@@ -1,5 +1,6 @@
 #include "ft_printf.h"
 #include <stdio.h>
+#include <string.h>
 
 #define GREEN		"\033[0;32m"
 #define RED			"\033[0;31m"
