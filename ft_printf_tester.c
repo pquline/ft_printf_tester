@@ -334,6 +334,7 @@ void	string(void)
 {
 	print_columns();
 	print_category("\%s", "STRING");
+	print_string(NULL);
 	print_string("");
 	print_string("...");
 	print_string("hello, world");
@@ -451,7 +452,7 @@ void	integer_flags(void)
 	print_decimal(-42);
 	print_mix1(" %.1d ", 0, 0, 0, 0, 0);
 	print_mix1("%+5d", 42, 0, 0, 0, 0);
-	print_mix1("%-5d", 42, 0, 0, 0, 0);
+	print_mix1("%-d", INT_MIN, 0, 0, 0, 0);
 	print_mix1("%05d", 42, 0, 0, 0, 0);
 	print_mix1("% d", 42, 0, 0, 0, 0);
 	print_mix1("%+10.5d", 42, 0, 0, 0, 0);
@@ -482,7 +483,7 @@ void	hex_flags(void)
 	print_mix1("%#x", 255, 0, 0, 0, 0);
 	print_mix1("%#X", 255, 0, 0, 0, 0);
 	print_mix1("%#8x", 255, 0, 0, 0, 0);
-	print_mix1("%-#8x", 255, 0, 0, 0, 0);
+	print_mix1("%0#8x", 255, 0, 0, 0, 0);
 	print_mix1("%08x", 255, 0, 0, 0, 0);
 }
 
