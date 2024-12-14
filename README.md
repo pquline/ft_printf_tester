@@ -38,4 +38,4 @@ cd ft_printf_tester/
 
 ## Example
 
-![ft_printf_tester](https://github.com/user-attachments/assets/6af4b456-9afa-439d-8924-6d4dea697473)
+![screenshot](https://github.com/user-attachments/assets/62b54d36-19d3-406a-978f-f0c383b3dee7)
