@@ -31,7 +31,7 @@ void	print_title(char *title)
 	int title_length = strlen(title) + 2;
 	int padding = (total_width - title_length) / 2;
 
-	printf("\n" YELLOW);
+	printf(YELLOW);
 	for (int i = 0; i < padding; i++)
 		printf("-");
 	printf(" %s ", title);
@@ -39,8 +39,7 @@ void	print_title(char *title)
 		printf("-");
 	if ((title_length % 2) != (total_width % 2))
 		printf("-");
-	printf("\n\n");
-	printf(NO_STYLE);
+	printf("\n" NO_STYLE);
 }
 
 void	print_columns(void)
@@ -93,7 +92,7 @@ void	print_no_conversion(char *str)
 	size_t	ft_result;
 	size_t	og_result;
 
-	printf(BLUE "           [%s]\n" NO_STYLE, str);
+	printf("\n");
 	fflush(NULL);
 	ft_printf("ft_printf: [");
 	ft_result = ft_printf(str);
@@ -110,7 +109,7 @@ void	print_single_character(unsigned char c)
 	size_t	ft_result;
 	size_t	og_result;
 
-	printf(BLUE "           [%c]\n" NO_STYLE, c);
+	printf("\n");
 	fflush(NULL);
 	ft_printf("ft_printf: [");
 	ft_result = ft_printf("%c", c);
@@ -127,7 +126,7 @@ void	print_string(char *str)
 	size_t	ft_result;
 	size_t	og_result;
 
-	printf(BLUE "           [%s]\n" NO_STYLE, str);
+	printf("\n");
 	fflush(NULL);
 	ft_printf("ft_printf: [");
 	ft_result = ft_printf("%s", str);
@@ -144,7 +143,7 @@ void	print_pointer(void *ptr)
 	size_t	ft_result;
 	size_t	og_result;
 
-	printf(BLUE "           [%p]\n" NO_STYLE, ptr);
+	printf("\n");
 	fflush(NULL);
 	ft_printf("ft_printf: [");
 	ft_result = ft_printf("%p", ptr);
@@ -161,7 +160,7 @@ void	print_decimal(int nbr)
 	size_t	ft_result;
 	size_t	og_result;
 
-	printf(BLUE "           [%d]\n" NO_STYLE, nbr);
+	printf("\n");
 	fflush(NULL);
 	ft_printf("ft_printf: [");
 	ft_result = ft_printf("%d", nbr);
@@ -178,7 +177,7 @@ void	print_integer(int nbr)
 	size_t	ft_result;
 	size_t	og_result;
 
-	printf(BLUE "           [%d]\n" NO_STYLE, nbr);
+	printf("\n");
 	fflush(NULL);
 	ft_printf("ft_printf: [");
 	ft_result = ft_printf("%i", nbr);
@@ -195,7 +194,7 @@ void	print_unsigned_decimal(unsigned int nbr)
 	size_t	ft_result;
 	size_t	og_result;
 
-	printf(BLUE "           [%u]\n" NO_STYLE, nbr);
+	printf("\n");
 	fflush(NULL);
 	ft_printf("ft_printf: [");
 	ft_result = ft_printf("%u", nbr);
@@ -212,7 +211,7 @@ void	print_hex_lower(int nbr)
 	size_t	ft_result;
 	size_t	og_result;
 
-	printf(BLUE "           [%d]\n" NO_STYLE, nbr);
+	printf("\n");
 	fflush(NULL);
 	ft_printf("ft_printf: [");
 	ft_result = ft_printf("%x", nbr);
@@ -229,7 +228,7 @@ void	print_hex_upper(int nbr)
 	size_t	ft_result;
 	size_t	og_result;
 
-	printf(BLUE "           [%d]\n" NO_STYLE, nbr);
+	printf("\n");
 	fflush(NULL);
 	ft_printf("ft_printf: [");
 	ft_result = ft_printf("%X", nbr);
@@ -399,6 +398,7 @@ void	hex_lower(void)
 	print_hex_lower(-42);
 	print_hex_lower(0);
 	print_hex_lower(42);
+	print_hex_lower(255);
 	print_hex_lower(2147483647);
 	print_hex_lower((int)4147483648);
 }
@@ -411,6 +411,7 @@ void	hex_upper(void)
 	print_hex_upper(-42);
 	print_hex_upper(0);
 	print_hex_upper(42);
+	print_hex_upper(255);
 	print_hex_upper(2147483647);
 	print_hex_upper((int)4147483648);
 }
@@ -449,9 +450,6 @@ void	integer_flags(void)
 {
 	print_columns();
 	print_category("%d and %i", "INTEGER FLAGS");
-	print_decimal(0);
-	print_decimal(42);
-	print_decimal(-42);
 	print_mix1(" %.1d ", 0, 0, 0, 0, 0);
 	print_mix1("%+5d", 42, 0, 0, 0, 0);
 	print_mix1("%-d", INT_MIN, 0, 0, 0, 0);
@@ -466,9 +464,7 @@ void	integer_flags(void)
 void	unsigned_flags(void)
 {
 	print_columns();
-	print_category("%u", "UNSIGNED FLAGS");
-	print_unsigned_decimal(0);
-	print_unsigned_decimal(4294967295);
+	print_category("%u", "UNSIGNED FLAGS");\
 	print_mix1("%05u", 42, 0, 0, 0, 0);
 	print_mix1("%10u", 42, 0, 0, 0, 0);
 	print_mix1("%-10u", 42, 0, 0, 0, 0);
@@ -479,9 +475,6 @@ void	hex_flags(void)
 {
 	print_columns();
 	print_category("%x and %X", "HEXADECIMAL FLAGS");
-	print_hex_lower(0);
-	print_hex_lower(255);
-	print_hex_upper(255);
 	print_mix1("%#x", 255, 0, 0, 0, 0);
 	print_mix1("%#X", 255, 0, 0, 0, 0);
 	print_mix1("%#8x", 255, 0, 0, 0, 0);
@@ -493,8 +486,6 @@ void	string_flags(void)
 {
 	print_columns();
 	print_category("%s", "STRING FLAGS");
-	print_string("hello");
-	print_string("world");
 	print_mix2("%-20s", "hello", "", "", "", "");
 	print_mix2("%20s", "world", "", "", "", "");
 	print_mix2("%.5s", "hello, world", "", "", "", "");
@@ -509,18 +500,23 @@ void	pointer_flags(void)
 
 	print_columns();
 	print_category("\%p", "POINTER FLAGS");
-	print_pointer(NULL);
-	print_pointer((void *)42);
+	print_mix3("%p", NULL, 0, 0, 0, 0);
+	print_mix3("%p", (void *)42, 0, 0, 0, 0);
 	print_mix3("%20p", &dummy, 0, 0, 0, 0);
 	print_mix3("%-20p", &dummy, 0, 0, 0, 0);
 	print_mix3("%.5p", &dummy, 0, 0, 0, 0);
 }
 
-int	main(void)
+int	main(int argc, char **argv)
 {
+	if (argc != 2)
+		return (1);
+
 	print_header();
 
-	print_title("MANDATORY");
+	if (strcmp(argv[1], "m") != 0)
+		print_title("MANDATORY");
+
 	no_conversion();
 	single_character();
 	string();
@@ -532,6 +528,10 @@ int	main(void)
 	hex_upper();
 	percent();
 	mix();
+	printf("\n");
+
+	if (strcmp(argv[1], "b") != 0)
+		return (0);
 
 	print_title("BONUS");
 	single_character_flags();
@@ -540,6 +540,7 @@ int	main(void)
 	hex_flags();
 	string_flags();
 	pointer_flags();
+	printf("\n");
 
 	return (0);
 }
