@@ -9,29 +9,32 @@ It **only checks for differences between the return values** of ```printf``` and
 
 ### Tree structure
 
-```bash
-$> ls -l ft_printf
-```
 ```text
--rw-r--r--	1	XX	XX	XX Jan  1 00:00	Makefile
--rw-r--r--	1	XX	XX	XX Jan  1 00:00	*.h, */*.h
--rw-r--r--	1	XX	XX	XX Jan  1 00:00	*.c, */*.c
-drwxr-xr-x	1	XX	XX	XX Jan  1 00:00	ft_printf_tester/
+ft_printf/
+├─Makefile
+├─includes/*.h
+├─*
+└─ft_printf_tester
 ```
+
 ### Installation
-- Clone the repository at the root of ```ft_printf``` project:
+
+- Clone the repository at the root of ```ft_printf``` project and change the working directory:
+
 ```bash
 git clone https://github.com/pquline/ft_printf_tester.git
-```
-- Change the working directory:
-```bash
 cd ft_printf_tester/
 ```
-- Run the script:
+
+### Run tester
+
+- `b`: run the tester in `bonus` mode
+
 ```bash
-./run.sh
+./tester [b]
 ```
-*Note: If the .h files are not located in the ```ìncludes/``` folder, change the ```$INCLUDES``` value according to their location.*
+
+**Note: If you header files are not located in the `ìncludes/` directory, edit the `INCLUDES` value according to their current location in [run.sh](./run.sh).**
 
 ## Example
 
