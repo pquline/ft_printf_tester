@@ -14,7 +14,7 @@ ft_printf/
 ├─Makefile
 ├─includes/*.h
 ├─*
-└─ft_printf_tester
+└─ft_printf_tester/
 ```
 
 ### Installation
