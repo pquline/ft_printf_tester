@@ -34,7 +34,7 @@ cd ft_printf_tester/
 ./tester [b]
 ```
 
-**Note: If you header files are not located in the `ìncludes/` directory, edit the `INCLUDES` value according to their current location in [run.sh](./run.sh).**
+**Note: If your header files are not located in the `ìncludes/` directory, edit the `INCLUDES` value according to their current location in [run.sh](./run.sh).**
 
 ## Example
 
