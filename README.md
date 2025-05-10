@@ -1,41 +1,59 @@
-# FT_PRINTF_TESTER
+# 🚀 ft\_printf\_tester 🚀
 
-## Summary
+This is a simple tester for the 42 [`ft_printf`](https://github.com/pquline/ft_printf) project. It’s designed to **compare** the return values of `printf` and `ft_printf`.
+Keep in mind that this tester only checks **the return values** — so you’ll need to manually inspect the outputs.
 
-A basic tester for 42 [```ft_printf```](https://github.com/pquline/ft_printf) project.</br>
-It **only checks for differences between the return values** of ```printf``` and ```ft_printf```, so the outputs are to be manually checked
+---
 
-## Usage
+## 🔥 Quick Start
 
-### Tree structure
+### 🌲 Project Structure
+
+Here’s a quick overview of what your project should look like when using the tester:
 
 ```text
 ft_printf/
-├─Makefile
-├─includes/*.h
-├─*
-└─ft_printf_tester/
+├── Makefile
+├── includes/*.h
+├── *
+└── ft_printf_tester/
 ```
 
-### Installation
+### 🛠️ Installation
 
-- Clone the repository at the root of ```ft_printf``` project and change the working directory:
+1. **Clone the repository** into your `ft_printf` project directory:
 
-```bash
-git clone https://github.com/pquline/ft_printf_tester.git
-cd ft_printf_tester/
-```
+   ```bash
+   git clone https://github.com/pquline/ft_printf_tester.git
+   cd ft_printf_tester/
+   ```
 
-### Run tester
+2. Once you’re in the `ft_printf_tester/` directory, make sure you have your `ft_printf` project set up and ready to go.
 
-- `b`: run the tester in `bonus` mode
+---
+
+## 🚀 How to Use It
+
+### 🏃‍♂️ Running the Tester
+
+You can run the tester by using the following command:
 
 ```bash
 ./tester [b]
 ```
 
-**Note: If your header files are not located in the `ìncludes/` directory, edit the `INCLUDES` value according to their current location in [run.sh](./run.sh).**
+* **Optional `b` flag**: If you want to test your **bonus** features, just add the `b` flag like so: `./tester b`. Otherwise, the tester will run in normal mode!
 
-## Example
+### ⚙️ Customizing Your Include Path
+
+If your header files aren’t in the default `includes/` directory, just edit the `INCLUDES` variable in the `run.sh` script to point to the right place:
+
+```bash
+INCLUDES=/path/to/your/includes
+```
+
+---
+
+## 💡 Example
 
 ![screenshot](https://github.com/user-attachments/assets/62b54d36-19d3-406a-978f-f0c383b3dee7)
